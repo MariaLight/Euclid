@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion(
+                {
+                    collapsible: true,
+                    active: false,
+                    heightStyle: 'content',
+                }
+            );
+
+        });
+    </script>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Euclid</title>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+
+            <button class="btn burger" id="burger"></button>
+
+            <a href="/" class="header-logo-link">
+                <picture class="header-logo">
+                    <source srcset="img/header/logo@2x.png" 2x>
+                    <img src="img/header/logo.png" alt="Euclid" class="header-logo"
+                        aria-label="Евклид. Проектные системы">
+                </picture>
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav-list menu" id="menu">
+                    <li class="header-nav-item">
+                        <a href="#about-us" class="header-nav-link">О нас</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">Проекты</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#how-we-work" class="header-nav-link">Этапы</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#" class="header-nav-link">Отзывы</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#footer" class="header-nav-link">Контакты</a>
+                    </li>
+                </ul>
+                <button class="btn search-btn" aria-label="Поиск"></button>
+                <!-- <button class="burger"></button> -->
+            </nav>
+        </div>
+    </header>
+
+    <section class="container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide first poster">
+            </div>
+            <div class="swiper-slide second poster">
+            </div>
+            <div class="swiper-slide third poster">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="poster-article">
+            <h1 class="title poster-title">На этой странице могут быть:</h1>
+            <p class="poster-description">Ваши проекты, отзывы о работе, различные документы и данные.</p>
+            <form action="#form">
+                <button class="btn poster-btn">Заказать расчёт</button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <img src="img/footer/logo-white.png" alt="Евклид" class="footer-logo" aria-label="Логотип">
+                <nav class="footer-nav">
+                    <ul class="footer-nav-list">
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">О нас</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Проекты</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Отзывы</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Договор оферты</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Договор подряда</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Конфиденциальность</a></li>
+                        <li class="footer-nav-item"><a href="#" class="footer-nav-link">Партнёрское соглашение</a></li>
+                    </ul>
+                </nav>
+                <ul class="social-media">
+                    <li class="social-media-icon">
+                        <a href="#" class="social-media-link fb" aria-label="Facebook">
+                        </a>
+                    </li>
+                    <li class="social-media-icon">
+                        <a href="#" class="social-media-link vk" aria-label="Вконтакте">
+                        </a>
+                    </li>
+                    <li class="social-media-icon">
+                        <a href="#" class="social-media-link ig" aria-label="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="footer-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST"
+                id="form">
+                <h2 class="title footer-form-title">Оставить заявку</h2>
+                <input required type="text" name="name" class="input footer-input"
+                    placeholder="Фамилия, имя и отчество*">
+                <input required type="tel" name="tel" class="input footer-input" placeholder="E-mail*">
+                <textarea name="textarea" class="input footer-input" placeholder="Сообщение..."></textarea>
+                <div class="footer-form-send">
+                    <button type="submit" class="btn footer-btn">Отправить данные</button>
+                    <input required type="checkbox" name="check" id="data-processing" class="footer-form-checkbox">
+                    <label class="footer-form-label" for="data-processing">
+                        Согласен на обработку данных
+                    </label>
+                </div>
+            </form>
+            <p class="footer-description">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели
+                развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов)
+                участие в формировании стандартных подходов.
+            </p>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <button class="modal-btn-x"></button>
+            <p class="modal-text">Сейчас эта функция недоступна. Тут может быть ссылка на страницу с Вашими работами,
+                описанием
+                Вашей компании, цен и т.д.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

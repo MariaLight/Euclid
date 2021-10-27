@@ -46,6 +46,20 @@ document.addEventListener('DOMContentLoaded', function(){
       document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
     })
   })
+
+  const modal = document.querySelector('.modal');
+  const moreBtn = document.querySelectorAll('.open-modal');
+  const xBtn = document.querySelector('.modal-btn-x');
+  for (let i = 0; i < moreBtn.length; i++){
+      moreBtn[i].addEventListener('click', function(){
+        modal.classList.add('is-open');
+      })
+
+  }
+  xBtn.addEventListener('click', function(){
+        modal.classList.remove('is-open');
+  })
+  
 })
 
 

@@ -40,7 +40,7 @@
 
       <button class="btn burger" id="burger"></button>
 
-      <a href="#" class="header-logo-link">
+      <a href="/" class="header-logo-link">
         <picture class="header-logo">
           <source srcset="img/header/logo@2x.png" 2x>
           <img src="img/header/logo.png" alt="Euclid" class="header-logo" aria-label="Евклид. Проектные системы">
@@ -52,13 +52,13 @@
             <a href="#about-us" class="header-nav-link">О нас</a>
           </li>
           <li class="header-nav-item">
-            <a href="#" class="header-nav-link">Проекты</a>
+            <a href="page.html" class="header-nav-link">Проекты</a>
           </li>
           <li class="header-nav-item">
             <a href="#how-we-work" class="header-nav-link">Этапы</a>
           </li>
           <li class="header-nav-item">
-            <a href="#" class="header-nav-link">Отзывы</a>
+            <a href="page.html" class="header-nav-link">Отзывы</a>
           </li>
           <li class="header-nav-item">
             <a href="#footer" class="header-nav-link">Контакты</a>
@@ -87,7 +87,9 @@
       <h1 class="title poster-title">Проектные решения любой сложности</h1>
       <p class="poster-description">Есть над чем задуматься: базовые сценарии поведения пользователей и по
         сей день остаются уделом проектантов</p>
-      <button class="btn poster-btn">Заказать расчёт</button>
+        <form action="#form">
+          <button class="btn poster-btn">Заказать расчёт</button>
+        </form>
     </div>
 
   </section>
@@ -97,21 +99,28 @@
 
     <section class="about-us" id="about-us">
       <h2 class="title about-us-title">О нас</h2>
-      <p class="about-us-description">Также как перспективное планирование создаёт необходимость включения в
+      <article class="about-us-description">Также как перспективное планирование создаёт необходимость включения в
         производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов,
         поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны
         максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов
         требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует
-        отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность
+        отметить, что высококачественный прототип 
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-description">
+            Прототип — быстрая, черновая реализация будущей системы
+          </div>
+        </div>
+        будущего проекта предопределяет высокую востребованность
         позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того,
-        что высококачественный прототип будущего проекта способствует повышению качества экспериментов.</p>
+        что высококачественный прототип будущего проекта способствует повышению качества экспериментов.</article>
       <div class="about-us-info-block">
         <div class="about-us-info-block1">
           <img src="img/about-us/about-us@2x.jpg" alt="" class="about-us-picture">
           <div class="about-us-info-block-more-module">
             <p class="about-us-info-block-description">Принимая во внимание показатели успешности,
               перспективное планирование способствует подготовке и реализации новых принципов.</p>
-            <button class="btn about-us-info-block-btn">Подробнее</button>
+            <button class="btn about-us-info-block-btn open-modal">Подробнее</button>
           </div>
         </div>
         <ul class="about-us-info-block2">
@@ -164,8 +173,8 @@
             серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
             нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
             конкретные выводы, разумеется, призваны к ответу.</p>
-          <button class="btn how-we-work-article-btn">Подробнее</button>
-          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+          <button class="btn how-we-work-article-btn open-modal">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white open-modal">Договор</button>
         </div>
 
 
@@ -193,8 +202,8 @@
             Pariatur voluptas quibusdam, inventore sapiente, omnis illum numquam repudiandae in qui aut doloremque
             provident vero iusto cumque sint? Aut quaerat quibusdam consequuntur. Ipsum ducimus atque sit minima
             corporis eaque accusantium.</p>
-          <button class="btn how-we-work-article-btn">Подробнее</button>
-          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+          <button class="btn how-we-work-article-btn open-modal">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white open-modal">Договор</button>
         </div>
 
 
@@ -207,8 +216,8 @@
           <p class="how-we-work-article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae repellat maiores labore saepe ex veniam praesentium a minus autem, nesciunt ducimus explicabo ipsum possimus. Rem nihil beatae soluta exercitationem?
           Nemo non aut quisquam modi perspiciatis aliquid, autem ipsa suscipit quos, accusantium cum? A numquam quibusdam enim nisi porro, consequuntur, eius tempora aspernatur pariatur libero architecto possimus est aut ex.
           Ad expedita doloremque aut praesentium quos. Repellendus ratione nihil iste magnam nam quod ullam, dolor exercitationem at rem eius saepe voluptates possimus a! Tempora, cumque odit impedit et reprehenderit quos!</p>
-          <button class="btn how-we-work-article-btn">Подробнее</button>
-          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+          <button class="btn how-we-work-article-btn open-modal">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white open-modal">Договор</button>
         </div>
 
 
@@ -222,8 +231,8 @@
           Doloremque fugit accusamus ipsum, quis molestiae iure velit earum eius necessitatibus harum corrupti ab fugiat dolores eum labore officiis cum totam dicta? Ipsum quis, mollitia obcaecati commodi aut pariatur dolorum?
           Cum, sint et voluptate expedita labore iure quae quidem eos debitis velit voluptatem soluta ab? Eius eveniet ipsam sunt harum, natus impedit provident ut iste dolorem distinctio, qui soluta voluptatem.
           Laboriosam voluptatibus omnis laborum quod dignissimos ipsum adipisci cumque? Minima ad, nesciunt perferendis minus accusamus ipsam tempora? Nihil, illum ut! Alias culpa error dicta suscipit ullam delectus voluptatibus pariatur earum!</p>
-          <button class="btn how-we-work-article-btn">Подробнее</button>
-          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+          <button class="btn how-we-work-article-btn open-modal">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white open-modal">Договор</button>
         </div>
 
 
@@ -353,31 +362,31 @@
         <img src="img/footer/logo-white.png" alt="Евклид" class="footer-logo" aria-label="Логотип">
         <nav class="footer-nav">
           <ul class="footer-nav-list">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">О нас</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Проекты</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Отзывы</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Договор оферты</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Договор подряда</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Конфиденциальность</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Партнёрское соглашение</a></li>
+            <li class="footer-nav-item"><a href="#about-us" class="footer-nav-link">О нас</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Проекты</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Отзывы</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Договор оферты</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Договор подряда</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Конфиденциальность</a></li>
+            <li class="footer-nav-item"><a href="page.html" class="footer-nav-link">Партнёрское соглашение</a></li>
           </ul>
         </nav>
         <ul class="social-media">
           <li class="social-media-icon">
-            <a href="#" class="social-media-link fb" aria-label="Facebook">
+            <a href="#" class="social-media-link fb open-modal" aria-label="Facebook">
             </a>
           </li>
           <li class="social-media-icon">
-            <a href="#" class="social-media-link vk" aria-label="Вконтакте">
+            <a href="#" class="social-media-link vk open-modal" aria-label="Вконтакте">
             </a>
           </li>
           <li class="social-media-icon">
-            <a href="#" class="social-media-link ig" aria-label="Instagram">
+            <a href="#" class="social-media-link ig open-modal" aria-label="Instagram">
             </a>
           </li>
         </ul>
       </div>
-      <form class="footer-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST">
+      <form class="footer-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" id="form">
         <h2 class="title footer-form-title">Оставить заявку</h2>
         <input required type="text" name="name" class="input footer-input" placeholder="Фамилия, имя и отчество*">
         <input required type="tel" name="tel" class="input footer-input" placeholder="E-mail*">
@@ -398,6 +407,14 @@
       </p>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="modal-dialog">
+      <button class="modal-btn-x"></button>
+      <p class="modal-text">Сейчас эта функция недоступна. Тут может быть ссылка на страницу с Вашими работами, описанием
+        Вашей компании, ценами, ссылками на соц.сети и т.д.</p>
+    </div>
+  </div>
 
 </body>
 
