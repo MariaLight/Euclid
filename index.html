@@ -4,172 +4,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#accordion").accordion(
+        {
+          collapsible: true,
+          active: false,
+          heightStyle: 'content',
+        }
+      );
+
+    });
+  </script>
+
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
   <link rel="stylesheet" href="css/style.css">
+
   <title>Euclid</title>
+
+
 </head>
 
 <body>
   <header class="header">
     <div class="container header-container">
-      <!-- <picture>
-                <source srcset="img/logo@2x.png" 2x, "img/logo.png" 1x>
-                <img src="img/logo.png" alt="Euclid" class="header-logo">
-            </picture> -->
-      <button class="btn burger"></button>
 
-      <a href="#" class="header-logo-link"><img src="img/header/logo.png" alt="Euclid" class="header-logo"></a>
+      <button class="btn burger" id="burger"></button>
+
+      <a href="#" class="header-logo-link">
+        <picture class="header-logo">
+          <source srcset="img/header/logo@2x.png" 2x>
+          <img src="img/header/logo.png" alt="Euclid" class="header-logo" aria-label="Евклид. Проектные системы">
+        </picture>
+      </a>
       <nav class="header-nav">
-        <ul class="header-nav-list">
+        <ul class="header-nav-list menu" id="menu">
           <li class="header-nav-item">
-            <a href="#" class="header-nav-link">О нас</a>
+            <a href="#about-us" class="header-nav-link">О нас</a>
           </li>
           <li class="header-nav-item">
             <a href="#" class="header-nav-link">Проекты</a>
           </li>
           <li class="header-nav-item">
-            <a href="#" class="header-nav-link">Этапы</a>
+            <a href="#how-we-work" class="header-nav-link">Этапы</a>
           </li>
           <li class="header-nav-item">
             <a href="#" class="header-nav-link">Отзывы</a>
           </li>
           <li class="header-nav-item">
-            <a href="#" class="header-nav-link">Контакты</a>
+            <a href="#footer" class="header-nav-link">Контакты</a>
           </li>
         </ul>
-        <button class="btn search-btn"></button>
+        <button class="btn search-btn" aria-label="Поиск"></button>
         <!-- <button class="burger"></button> -->
       </nav>
     </div>
   </header>
 
-  <section class="container poster">
+  <section class="container swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide first poster">
+      </div>
+      <div class="swiper-slide second poster">
+      </div>
+      <div class="swiper-slide third poster">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
     <div class="poster-article">
       <h1 class="title poster-title">Проектные решения любой сложности</h1>
       <p class="poster-description">Есть над чем задуматься: базовые сценарии поведения пользователей и по
         сей день остаются уделом проектантов</p>
       <button class="btn poster-btn">Заказать расчёт</button>
     </div>
+
   </section>
-  
 
-<main class="main container">
 
-  <section class="about-us">
-    <h2 class="title about-us-title">О нас</h2>
-    <p class="about-us-description">Также как перспективное планирование создаёт необходимость включения в
-      производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов,
-      поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны
-      максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов
-      требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует
-      отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность
-      позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того,
-      что высококачественный прототип будущего проекта способствует повышению качества экспериментов.</p>
-    <div class="about-us-info-block">
-      <div class="about-us-info-block1">
-        <img src="img/about-us/about-us@2x.jpg" alt="" class="about-us-picture">
-        <div class="about-us-info-block-more-module">
-          <p class="about-us-info-block-description">Принимая во внимание показатели успешности,
-            перспективное планирование способствует подготовке и реализации новых принципов.</p>
-          <a href="#" class="btn about-us-info-block-btn">Подробнее</a>
+  <main class="main container">
+
+    <section class="about-us" id="about-us">
+      <h2 class="title about-us-title">О нас</h2>
+      <p class="about-us-description">Также как перспективное планирование создаёт необходимость включения в
+        производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов,
+        поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны
+        максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов
+        требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует
+        отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность
+        позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того,
+        что высококачественный прототип будущего проекта способствует повышению качества экспериментов.</p>
+      <div class="about-us-info-block">
+        <div class="about-us-info-block1">
+          <img src="img/about-us/about-us@2x.jpg" alt="" class="about-us-picture">
+          <div class="about-us-info-block-more-module">
+            <p class="about-us-info-block-description">Принимая во внимание показатели успешности,
+              перспективное планирование способствует подготовке и реализации новых принципов.</p>
+            <button class="btn about-us-info-block-btn">Подробнее</button>
+          </div>
         </div>
+        <ul class="about-us-info-block2">
+          <li class="about-us-info-block2-item consult">
+            <div class="about-us-info-block2-item-text">
+              <h3 class="title-2 about-us-info-block2-item-title">Консультация с широким активом</h3>
+              <p class="about-us-info-block2-item-description">А также свежий взгляд на привычные вещи
+                - безусловно открывает новые горизонты для как самодостаточных, так и внешне
+                зависимых концептуальных решений.</p>
+            </div>
+          </li>
+          <li class="about-us-info-block2-item quality">
+            <div class="about-us-info-block2-item-text">
+              <h3 class="title-2 about-us-info-block2-item-title">В своём стремлении повысить</h3>
+              <p class="about-us-info-block2-item-description">Качество жизни, они забывают, что
+                сплочённость команды профессионалов представляет собой интересный эксперимент
+                проверки прогресса профессионального сообщества. </p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="about-us-info-block2">
-        <li class="about-us-info-block2-item consult">
-          <div class="about-us-info-block2-item-text">
-            <h3 class="title-2 about-us-info-block2-item-title">Консультация с широким активом</h3>
-            <p class="about-us-info-block2-item-description">А также свежий взгляд на привычные вещи
-              - безусловно открывает новые горизонты для как самодостаточных, так и внешне
-              зависимых концептуальных решений.</p>
-          </div>
+    </section>
+
+
+    <section class="how-we-work" id='how-we-work'>
+      <h2 class="title how-we-work-title">Как мы работаем</h2>
+      <ul class="how-we-work-steps-list">
+        <li class="how-we-work-steps-item"><button class="how-we-work-steps-link" aria-label="Первый шаг"
+            data-path="one">1 шаг</button>
         </li>
-        <li class="about-us-info-block2-item quality">
-          <div class="about-us-info-block2-item-text">
-            <h3 class="title-2 about-us-info-block2-item-title">В своём стремлении повысить</h3>
-            <p class="about-us-info-block2-item-description">Качество жизни, они забывают, что
-              сплочённость команды профессионалов представляет собой интересный эксперимент
-              проверки прогресса профессионального сообщества. </p>
-          </div>
+        <li class="how-we-work-steps-item"><button class="how-we-work-steps-link" aria-label="Второй шаг"
+            data-path="two">2 шаг</button>
+        </li>
+        <li class="how-we-work-steps-item"><button class="how-we-work-steps-link" aria-label="Третий шаг"
+            data-path="three">3 шаг</button>
+        </li>
+        <li class="how-we-work-steps-item"><button class="how-we-work-steps-link" aria-label="Четвёртый шаг"
+            data-path="four">4
+            шаг</button></li>
+      </ul>
+      <article class="how-we-work-article tab-content tab-content-active" data-target="one">
+        <div class="how-we-work-article-info">
+          <h3 class="title-2 how-we-work-article-title">Проводим консультацию</h3>
+          <p class="how-we-work-article-description">Влечет за собой процесс внедрения и модернизации
+            приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые
+            особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А
+            также представители современных социальных резервов, инициированные исключительно
+            синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей
+            картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой
+            серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
+            нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
+            конкретные выводы, разумеется, призваны к ответу.</p>
+          <button class="btn how-we-work-article-btn">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+        </div>
+
+
+        <img src="img/how-we-work/how-we-work.jpg" alt="" class="how-we-work-article-picture">
+
+      </article>
+
+      <article class="how-we-work-article tab-content" data-target="two">
+        <div class="how-we-work-article-info">
+          <h3 class="title-2 how-we-work-article-title">Проводим консультацию 2</h3>
+          <p class="how-we-work-article-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+            iure. Molestiae amet necessitatibus provident dolor iure aliquid ex perspiciatis optio, maiores, aliquam
+            incidunt omnis alias consequuntur perferendis quia culpa odit.
+            Ipsam, culpa illo? Alias architecto nemo sequi earum animi quae velit maxime quis. Sit id illum, corporis
+            tempore obcaecati impedit non eius mollitia provident reprehenderit tenetur. Maiores eos ab dolore.
+            Laborum saepe blanditiis expedita sapiente suscipit hic fuga atque, quod aspernatur magnam officia ex neque,
+            aliquam dolore totam recusandae asperiores maxime reiciendis velit culpa vitae architecto! Rerum et ipsam
+            natus.
+            Sunt, atque provident nam aperiam excepturi amet illum magnam debitis cumque est laboriosam doloremque a
+            facilis, quo, officiis neque optio et quam perferendis repudiandae minima? Alias eligendi earum quos
+            nostrum?
+            Optio accusantium veritatis, perferendis hic blanditiis eius quas eveniet consequuntur aut est animi
+            repudiandae voluptate ipsam tenetur ipsa nostrum, aperiam accusamus inventore reiciendis consectetur fugit
+            deserunt sed rerum? Ea, tempore?
+            Pariatur voluptas quibusdam, inventore sapiente, omnis illum numquam repudiandae in qui aut doloremque
+            provident vero iusto cumque sint? Aut quaerat quibusdam consequuntur. Ipsum ducimus atque sit minima
+            corporis eaque accusantium.</p>
+          <button class="btn how-we-work-article-btn">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+        </div>
+
+
+        <img src="img/how-we-work/how-we-work.jpg" alt="" class="how-we-work-article-picture">
+
+      </article>
+      <article class="how-we-work-article tab-content" data-target="three">
+        <div class="how-we-work-article-info">
+          <h3 class="title-2 how-we-work-article-title">Проводим консультацию 3</h3>
+          <p class="how-we-work-article-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae repellat maiores labore saepe ex veniam praesentium a minus autem, nesciunt ducimus explicabo ipsum possimus. Rem nihil beatae soluta exercitationem?
+          Nemo non aut quisquam modi perspiciatis aliquid, autem ipsa suscipit quos, accusantium cum? A numquam quibusdam enim nisi porro, consequuntur, eius tempora aspernatur pariatur libero architecto possimus est aut ex.
+          Ad expedita doloremque aut praesentium quos. Repellendus ratione nihil iste magnam nam quod ullam, dolor exercitationem at rem eius saepe voluptates possimus a! Tempora, cumque odit impedit et reprehenderit quos!</p>
+          <button class="btn how-we-work-article-btn">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+        </div>
+
+
+        <img src="img/how-we-work/how-we-work.jpg" alt="" class="how-we-work-article-picture">
+
+      </article>
+      <article class="how-we-work-article tab-content" data-target="four">
+        <div class="how-we-work-article-info">
+          <h3 class="title-2 how-we-work-article-title">Проводим консультацию 4</h3>
+          <p class="how-we-work-article-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi adipisci officia temporibus quo, veritatis, maiores facilis numquam reprehenderit vero ipsa veniam omnis iusto earum ipsam praesentium vel, nihil molestias aliquid.
+          Doloremque fugit accusamus ipsum, quis molestiae iure velit earum eius necessitatibus harum corrupti ab fugiat dolores eum labore officiis cum totam dicta? Ipsum quis, mollitia obcaecati commodi aut pariatur dolorum?
+          Cum, sint et voluptate expedita labore iure quae quidem eos debitis velit voluptatem soluta ab? Eius eveniet ipsam sunt harum, natus impedit provident ut iste dolorem distinctio, qui soluta voluptatem.
+          Laboriosam voluptatibus omnis laborum quod dignissimos ipsum adipisci cumque? Minima ad, nesciunt perferendis minus accusamus ipsam tempora? Nihil, illum ut! Alias culpa error dicta suscipit ullam delectus voluptatibus pariatur earum!</p>
+          <button class="btn how-we-work-article-btn">Подробнее</button>
+          <button class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</button>
+        </div>
+
+
+        <img src="img/how-we-work/how-we-work.jpg" alt="" class="how-we-work-article-picture">
+
+      </article>
+    </section>
+
+
+    <section class="questions">
+      <h2 class="title questions-title">Часто задаваемые вопросы</h2>
+      <ul class="questions-list" id='accordion'>
+        <li class="questions-item">
+          <a href="#" class="questions-item-link">
+            Из чего формируется конечная стоимость проекта?
+            <button class="btn questions-button" aria-label="Показать больше"></button>
+          </a>
+          <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+            должны быть указаны как претенденты на роль ключевых факторов.
+            <br><br>
+            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также
+            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+            представлены в исключительно положительном свете.
+          </p>
+        </li>
+        <li class="questions-item">
+          <a href="#" class="questions-item-link">
+            У меня есть свой проект. Сможем ли мы его доработать /
+            реализовать?
+            <button class="btn questions-button" aria-label="Показать больше"></button>
+
+          </a>
+          <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+            должны быть указаны как претенденты на роль ключевых факторов.
+            <br><br>
+            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также
+            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+            представлены в исключительно положительном свете.
+          </p>
+        </li>
+        <li class="questions-item">
+          <a href="#" class="questions-item-link">
+            Я выбираю между разными компаниями. В чём ваше отличие?
+
+            <button class="btn questions-button" aria-label="Показать больше"></button>
+
+          </a>
+          <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+            должны быть указаны как претенденты на роль ключевых факторов.
+            <br><br>
+            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также
+            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+            представлены в исключительно положительном свете.
+          </p>
+        </li>
+        <li class="questions-item">
+          <a href="#" class="questions-item-link">
+            Могу ли я делегировать вам работу / согласование с
+            подрядчиком / организацией?
+            <button class="btn questions-button" aria-label="Показать больше"></button>
+
+          </a>
+          <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+            должны быть указаны как претенденты на роль ключевых факторов.
+            <br><br>
+            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также
+            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+            представлены в исключительно положительном свете.
+          </p>
+        </li>
+        <li class="questions-item">
+          <a href="#" class="questions-item-link">
+            Могу ли я вернуть деньги на каком-либо из этапов работ?
+
+            <button class="btn questions-button" aria-label="Показать больше"></button>
+          </a>
+          <p>Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+            должны быть указаны как претенденты на роль ключевых факторов.
+            <br><br>
+            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также
+            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+            представлены в исключительно положительном свете.
+          </p>
         </li>
       </ul>
-    </div>
-  </section>
+    </section>
+  </main>
 
-
-  <section class="how-we-work">
-    <h2 class="title how-we-work-title">Как мы работаем</h2>
-    <ul class="how-we-work-steps-list">
-      <li class="how-we-work-steps-item"><button class="how-we-work-steps-link">1 шаг</button></li>
-      <li class="how-we-work-steps-item"><button class="how-we-work-steps-link">2 шаг</button></li>
-      <li class="how-we-work-steps-item"><button class="how-we-work-steps-link">3 шаг</button></li>
-      <li class="how-we-work-steps-item"><button class="how-we-work-steps-link">4 шаг</button></li>
-    </ul>
-    <article class="how-we-work-article">
-      <div class="how-we-work-article-info">
-        <h3 class="title-2 how-we-work-article-title">Проводим консультацию</h3>
-        <p class="how-we-work-article-description">Влечет за собой процесс внедрения и модернизации
-          приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые
-          особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А
-          также представители современных социальных резервов, инициированные исключительно
-          синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей
-          картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой
-          серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
-          нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
-          конкретные выводы, разумеется, призваны к ответу.</p>
-        <a href="#" class="btn how-we-work-article-btn">Подробнее</a>
-        <a href="#" class="btn how-we-work-article-btn how-we-work-article-btn-white">Договор</a>
-      </div>
-      <img src="img/how-we-work/how-we-work.jpg" alt="" class="how-we-work-article-picture">
-    </article>
-  </section>
-
-
-  <section class="questions">
-    <h2 class="title questions-title">Часто задаваемые вопросы</h2>
-    <ul class="questions-list">
-      <li class="questions-item">
-        <a href="#" class="questions-item-link">
-          Из чего формируется конечная стоимость проекта?
-          <span class="btn questions-button"></span>
-        </a>
-      </li>
-      <li class="questions-item">
-        <a href="#" class="questions-item-link">
-          У меня есть свой проект. Сможем ли мы его доработать /
-          реализовать?
-          <span class="btn questions-button"></span>
-        </a>
-      </li>
-      <li class="questions-item">
-        <a href="#" class="questions-item-link">
-          Я выбираю между разными компаниями. В чём ваше отличие?
-
-          <span class="btn questions-button"></span>
-        </a>
-      </li>
-      <li class="questions-item">
-        <a href="#" class="questions-item-link">
-          Могу ли я делегировать вам работу / согласование с
-          подрядчиком / организацией?
-          <span class="btn questions-button"></span>
-        </a>
-      </li>
-      <li class="questions-item">
-        <a href="#" class="questions-item-link">
-          Могу ли я вернуть деньги на каком-либо из этапов работ?
-
-          <span class="btn questions-button"></span>
-        </a>
-      </li>
-    </ul>
-  </section>
-</main>
-
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container footer-container">
       <div class="footer-info">
-        <img src="img/footer/logo-white.png" alt="Euclid" class="footer-logo">
+        <img src="img/footer/logo-white.png" alt="Евклид" class="footer-logo" aria-label="Логотип">
         <nav class="footer-nav">
           <ul class="footer-nav-list">
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">О нас</a></li>
@@ -183,15 +364,15 @@
         </nav>
         <ul class="social-media">
           <li class="social-media-icon">
-            <a href="#" class="social-media-link fb">
+            <a href="#" class="social-media-link fb" aria-label="Facebook">
             </a>
           </li>
           <li class="social-media-icon">
-            <a href="#" class="social-media-link vk">
+            <a href="#" class="social-media-link vk" aria-label="Вконтакте">
             </a>
           </li>
           <li class="social-media-icon">
-            <a href="#" class="social-media-link ig">
+            <a href="#" class="social-media-link ig" aria-label="Instagram">
             </a>
           </li>
         </ul>
@@ -203,8 +384,8 @@
         <textarea name="textarea" class="input footer-input" placeholder="Сообщение..."></textarea>
         <div class="footer-form-send">
           <button type="submit" class="btn footer-btn">Отправить данные</button>
-          <label class="footer-form-label">
-            <input required type="checkbox" name="check" id="data-processing" class="footer-form-checkbox">
+          <input required type="checkbox" name="check" id="data-processing" class="footer-form-checkbox">
+          <label class="footer-form-label" for="data-processing">
             Согласен на обработку данных
           </label>
         </div>
@@ -217,6 +398,7 @@
       </p>
     </div>
   </footer>
+
 </body>
 
 </html>
