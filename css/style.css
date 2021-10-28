@@ -1428,6 +1428,9 @@ input:checked+label::before {
   .container {
     width: 90%;
   }
+  .about-us {
+    margin-top: 40px;
+  }
   .header-container {
     padding: 7px 0;
   }
